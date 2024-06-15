@@ -62,7 +62,6 @@ select {
     padding: 1.5rem;
     border-radius: 15px;
     border: 1px solid #ffffff;
-    overflow: hidden; /* Para garantir que o efeito de luzes não vaze para fora */
 }
 
 .todo-container header {
