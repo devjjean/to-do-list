@@ -1,0 +1,233 @@
+/* Estilos Gerais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+    color: #ccc;
+}
+
+body {
+    background: linear-gradient(to bottom right, #1f4666, #4e89ae);
+    min-height: 100vh;
+    margin: 0;
+}
+
+button {
+    background-color: #fdfdfd;
+    color: #102f5e;
+    border: 2px solid #102f5e;
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: #102f5e;
+}
+
+button:hover > i {
+    color: #fff;
+}
+
+button i {
+    pointer-events: none;
+    color: #102f5e;
+    font-weight: bold;
+}
+
+input,
+select {
+    padding: 0.25rem 0.5rem;
+}
+
+.hide {
+    display: none;
+}
+
+/* Container Principal */
+.todo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid #ffffff;
+    overflow: hidden; /* Para garantir que o efeito de luzes não vaze para fora */
+}
+
+.todo-container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Formulários */
+#todo-form,
+#edit-form {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+#todo-form p,
+#edit-form p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control input {
+    margin-bottom: 0.5rem;
+}
+
+.form-control button {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+}
+
+#cancel-edit-btn {
+    margin-top: 1rem;
+    color: #444;
+}
+
+/* Barra de Ferramentas */
+#toolbar {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+#toolbar h4 {
+    margin-bottom: 0.5rem;
+}
+
+#search {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#search form {
+    display: flex;
+    flex-direction: column;
+}
+
+#search input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+#filter {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 0.5rem;
+}
+
+#filter select {
+    width: 100%;
+}
+
+/* Lista de Tarefas */
+.todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.todo h3 {
+    flex: 1;
+    font-size: 1rem;
+}
+
+.todo button {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+}
+
+.done {
+    background: #395169;
+}
+
+.done h3 {
+    color: #fff;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .form-control {
+        flex-direction: row;
+    }
+
+    .form-control input {
+        margin-right: 0.3rem;
+        margin-bottom: 0;
+    }
+
+    .form-control button {
+        margin-top: 0;
+        align-self: center;
+    }
+
+    #toolbar {
+        flex-direction: row;
+    }
+
+    #search {
+        border-right: 1px solid #ddd;
+        padding-right: 1rem;
+        margin-right: 1rem;
+        width: 65%;
+    }
+
+    #filter {
+        width: 30%;
+        max-width: 200px;
+        margin-top: 0;
+    }
+
+    .todo {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .todo button {
+        margin-left: 0.4rem;
+        margin-top: 0;
+    }
+}
+
+/* Media Query para telas menores que 768px */
+@media (max-width: 767px) {
+    .todo-container {
+        width: 90%;
+        max-width: none;
+        margin: 1rem auto;
+        position: static;
+        transform: none;
+    }
+
+    /* Adicionar outros ajustes conforme necessário */
+}
